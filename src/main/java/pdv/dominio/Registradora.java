@@ -1,20 +1,23 @@
 package pdv.dominio;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import pdv.TestePDV;
 import pdv.dominio.excecoes.DescricaoProdutoInexistente;
 import pdv.dominio.pagamento.Operadora;
 
 public class Registradora {
+    private Tab tabRegistradora;
     private String id;
     private List<Venda> vendas;
     private CatalogoProdutos catalogo = new CatalogoProdutos();
@@ -23,13 +26,15 @@ public class Registradora {
     @FXML
     private Button botao;
     @FXML
-    public void initialize(){
-        String venda = "01";
-        listaVendas.getItems().add(venda);
+    public void janelaNovaVenda() throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(TestePDV.class.getResource("janelaNovaVenda.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 200, 200);
+        stage.setTitle("Supermercado Preço Bão");
+        stage.setScene(scene);
+        stage.show();
     }
-    public void novaGuia(){
-        
-    }
+
     public Registradora(){
 
     }
