@@ -5,7 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import pdv.dominio.excecoes.DescricaoProdutoInexistente;
 import pdv.dominio.pagamento.Operadora;
 
@@ -13,7 +18,18 @@ public class Registradora {
     private String id;
     private List<Venda> vendas;
     private CatalogoProdutos catalogo = new CatalogoProdutos();
-
+    @FXML
+    private ListView listaVendas;
+    @FXML
+    private Button botao;
+    @FXML
+    public void initialize(){
+        String venda = "01";
+        listaVendas.getItems().add(venda);
+    }
+    public void novaGuia(){
+        
+    }
     public Registradora(){
 
     }

@@ -16,6 +16,7 @@ public class TestePDV extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(TestePDV.class.getResource("pdv_resource.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("Supermercado Preço Bão");
+
         stage.setScene(scene);
         stage.show();
     }
