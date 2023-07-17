@@ -13,15 +13,11 @@ public class Registradora {
     private String id;
     private List<Venda> vendas;
     private CatalogoProdutos catalogo = new CatalogoProdutos();
-    @FXML
-    private Label welcomeText;
+
     public Registradora(){
 
     }
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+
     public Registradora(String id) {
         this.id = id;
         this.vendas = new ArrayList<>();
